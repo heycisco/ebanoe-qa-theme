@@ -9,7 +9,7 @@
 			<button>Подписываюсь</button>
 		</form>
 		<div class="telegram">
-			<span>Охуевший телеграм-канал</span><a href="#" id="sizer_01_child">@ebanoe_qa</a>
+			<span>Охуевший телеграм-канал</span><a href="https://t.me/ebanoe_qa" id="sizer_01_child">@ebanoe_qa</a>
 		</div>
 	</div>
 </div>
