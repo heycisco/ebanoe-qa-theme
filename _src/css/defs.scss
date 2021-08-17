@@ -1,0 +1,117 @@
+// FONTS
+$font: 'Roboto',
+sans-serif;
+// reg-400; med-500; bold-700; black-900
+
+
+// COLORS
+$white: #FFFFFF;
+$light: #E0E0E0;
+$dark: #191919;
+$blue: #54B3F8;
+$blue-2: #3f9adc;
+$placeholder: #A5A5A5;
+
+
+// GRID
+:root {
+	--page-width: 1440px;
+	--grid-gutter: 24px;
+	--grid-sides: 80px;
+	--grid-columns: 3;
+	--section-padding: 16px;
+	--section-indents: 48px;
+	--article-padding: 16px;
+	--panel-padding: 32px;
+	--border-radius: 16px;
+	--input-padding: 18px 8px;
+	--input-padding2: 18px 32px;
+
+	@media (max-width: 1024px) {
+		--grid-sides: 24px;
+		--grid-columns: 2;
+	}
+
+	@media (max-width: 1240px) {
+	--input-padding: 16px 8px;
+	--input-padding2: 16px 24px;
+
+	}
+
+	@media (max-width: 760px) {
+		--grid-gutter: 12px;
+		--grid-sides: 12px;
+		--grid-columns: 1;
+		--section-padding: 16px;
+		--section-indents: 32px;
+		--article-padding: 12px;
+		--panel-padding: 16px;
+		--border-radius: 12px;
+		--input-padding: 12px 8px;
+		--input-padding2: 12px 8px;
+
+	}
+}
+
+// MAIN
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: $dark;
+	background: $white;
+	font-family: $font;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.main-header,
+.main-footer,
+.main-block {
+	padding: var(--section-padding) var(--grid-sides);
+	width: 100%;
+	max-width: var(--page-width);
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.main-footer {
+	max-width: unset;
+}
+
+.main-block {
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	section {
+		width: 100%;
+	}
+}
+a, a:hover, a:focus, a:active {
+	color: inherit;
+}
+// MIXINS
+@mixin text-gradient {
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: linear-gradient(90deg, #0250C5 0%, #FF4E9D 100%);
+}
+
+@mixin bg-gradient {
+	background: linear-gradient(90deg, rgba(255, 5, 124, 0.19) 0%, rgba(124, 100, 213, 0.2) 48%, rgba(76, 195, 255, 0.2) 100%);
+}
+@mixin transition-in {
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+@mixin transition-out {
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+}

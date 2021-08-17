@@ -1,0 +1,137 @@
+.single-post {
+	.content-wrapper {
+		width: 100%;
+		padding: 4em 0;
+		max-width: 840px;
+	}
+
+	.post-title {
+		width: 100%;
+		text-align: left;
+		margin-bottom: 1rem;
+
+		h2 {
+			display: inline;
+			font-weight: 900;
+			font-size: 2.5rem;
+			line-height: 1.1;
+			@include text-gradient;
+
+			@media (max-width: 760px) {
+				font-size: 2rem;
+			}
+		}
+
+		.post-picture {
+			width: 100%;
+			height: 320px;
+			overflow: hidden;
+			border-radius: var(--border-radius);
+			margin: 1em 0;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.post-navigation {
+		position: relative;
+		padding-bottom: 2em;
+		margin-top: 4em;
+		width: 100%;
+
+		@media (max-width: 760px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.left,
+		.right,
+		.center {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+
+
+
+			a {
+				color: $blue;
+				font-weight: 400;
+				font-size: 0.85rem;
+				padding: 0.4em 1.2em;
+				border: 1px solid $blue;
+				border-radius: var(--border-radius);
+				display: block;
+				text-align: center;
+				transition-property: color, border;
+				@include transition-out;
+
+				&:hover {
+					color: $blue-2;
+					border: 1px solid $blue-2;
+					transition-property: color, border;
+					@include transition-in;
+				}
+
+			}
+		}
+
+
+		.right {
+			left: unset;
+			right: 0;
+		}
+
+		.center {
+			left: 50%;
+			right: unset;
+			transform: translateX(-50%);
+
+			a {
+				color: $white;
+				background: $blue;
+				transition-property: background, border;
+				@include transition-out;
+
+				&:hover {
+					color: $white;
+					background: $blue-2;
+					border: 1px solid $blue-2;
+					transition-property: background, border;
+					@include transition-in;
+				}
+			}
+		}
+
+		@media (max-width: 760px) {
+
+			.left,
+			.right,
+			.center {
+				position: relative;
+				margin-bottom: 0.5em;
+				top: 0;
+				left: 0;
+				right: 0;
+				transform: translateX(0);
+			}
+			.center {
+				order: 2;
+			}
+			.left {
+				margin-right: 1em;
+			}
+		}
+
+	}
+
+	.comments {
+		margin-top: 3em;
+	}
+}
