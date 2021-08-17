@@ -1,9 +1,9 @@
 <div class="branding">
 	<div class="left">
 		<picture>
-			<source srcset="<?php echo get_template_directory_uri();?>/images/image_main.webp">
-			<source srcset="<?php echo get_template_directory_uri();?>/images/image_main_mobile.webp" media="(min-width: 760px)">
-			<img src="<?php echo get_template_directory_uri();?>/images/image_main.jpg">
+			<source srcset="<?php echo get_template_directory_uri();?>/img/image_main.webp">
+			<source srcset="<?php echo get_template_directory_uri();?>/img/image_main_mobile.webp" media="(min-width: 760px)">
+			<img src="<?php echo get_template_directory_uri();?>/images/img_main.jpg">
 		</picture>
 	</div>
 	<div class="right">
